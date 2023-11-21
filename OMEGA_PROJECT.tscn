@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/Mistyc Woods/sprites/characters/parado frente.tres" type="Animation" id=1]
 [ext_resource path="res://Cleito.gd" type="Script" id=2]
@@ -81,35 +81,6 @@ tracks/5/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ true ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "andando_baixo"
-length = 1.2
-step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 18, 19, 20, 21, 22, 23 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -430,7 +401,6 @@ frame = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cleito/sprite_boneco"]
 anims/RESET = SubResource( 4 )
-anims/andando_baixo = SubResource( 5 )
 anims/andando_cima = SubResource( 6 )
 anims/andando_lado = SubResource( 7 )
 anims/ataque_baixo = SubResource( 8 )
@@ -455,7 +425,7 @@ shape = SubResource( 14 )
 disabled = true
 
 [node name="colisao_arma_baixo" type="CollisionShape2D" parent="Cleito"]
-position = Vector2( 2, 22 )
+position = Vector2( 2, 19 )
 rotation = 1.5708
 shape = SubResource( 14 )
 disabled = true
