@@ -56,15 +56,15 @@ height = 12.0
 position = Vector2( 157, 121 )
 script = ExtResource( 18 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="colisao" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 0.5 )
 shape = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 1 )
 frames = SubResource( 2 )
-animation = "ataque_cima"
-frame = 3
+animation = "ataque_baixo"
+frame = 2
 playing = true
 script = ExtResource( 19 )
 
@@ -73,9 +73,16 @@ script = ExtResource( 19 )
 [node name="mao" type="Area2D" parent="."]
 script = ExtResource( 20 )
 
-[node name="hit_box_crab" type="CollisionShape2D" parent="mao"]
+[node name="hit_box_crab_frente" type="CollisionShape2D" parent="mao"]
 position = Vector2( 0, -5 )
 rotation = -1.5708
 shape = SubResource( 4 )
+disabled = true
+
+[node name="hit_box_crab_atras" type="CollisionShape2D" parent="mao"]
+position = Vector2( 0, 8 )
+rotation = -1.5708
+shape = SubResource( 4 )
+disabled = true
 
 [connection signal="body_entered" from="mao" to="mao" method="_on_mao_body_entered"]

@@ -315,7 +315,8 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=12]
 resource_name = "morte"
-length = 0.3
+length = 0.6
+step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -323,10 +324,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.45 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 54, 55, 56, 57 ]
+"values": [ 54, 55, 56 ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -452,4 +453,5 @@ rotation = 1.5708
 shape = SubResource( 14 )
 disabled = true
 
+[connection signal="animation_finished" from="sprite_boneco/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="arma" to="arma" method="_on_arma_body_entered"]
