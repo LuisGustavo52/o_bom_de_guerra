@@ -8,4 +8,4 @@ extends KinematicBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Sprite/AnimationPlayer.play("parado_tras")
+	$sprite_boneco/AnimationPlayer.play("ataque_lado")

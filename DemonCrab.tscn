@@ -54,7 +54,7 @@ shape = SubResource( 1 )
 position = Vector2( 0, 1 )
 frames = SubResource( 2 )
 animation = "movimenta"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Timer" type="Timer" parent="."]
