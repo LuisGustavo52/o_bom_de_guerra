@@ -11,5 +11,8 @@ zoom = Vector2( 0.247, 0.497 )
 
 [node name="DemonCrab" parent="." instance=ExtResource( 3 )]
 position = Vector2( 103, 34 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Cleito" parent="." instance=ExtResource( 1 )]
