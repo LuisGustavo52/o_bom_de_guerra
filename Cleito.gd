@@ -4,6 +4,7 @@ var movimento = Vector2()
 var ultimaAnimacao = 0
 var vida = 3
 var morto = 0
+var velocidade = 175
 
 onready var anim = $sprite_boneco/AnimationPlayer
 onready var sprite = $sprite_boneco
@@ -51,22 +52,22 @@ func _physics_process(delta):
 				anim.play("ataque_baixo")
 				sprite.flip_h = false
 		elif Input.is_action_pressed("ui_right"):
-			movimento.x = 300
+			movimento.x = velocidade
 			anim.play("andando_lado")
 			sprite.flip_h = false
 			ultimaAnimacao = 1
 		elif Input.is_action_pressed("ui_left"):
-			movimento.x = -300
+			movimento.x = -velocidade
 			anim.play("andando_lado")
 			sprite.flip_h = true
 			ultimaAnimacao = 2
 		elif Input.is_action_pressed("ui_up"):
-			movimento.y = -300
+			movimento.y = -velocidade
 			anim.play("andando_cima")
 			sprite.flip_h = false
 			ultimaAnimacao = 3
 		elif Input.is_action_pressed("ui_down"):
-			movimento.y = 300
+			movimento.y = velocidade
 			anim.play("andando_baixo")
 			sprite.flip_h = false
 			ultimaAnimacao = 4
@@ -93,5 +94,6 @@ func _physics_process(delta):
 
 
 func _on_AnimationPlayer_animation_finished(anim):
-	print("morto")
+	pass
+
 

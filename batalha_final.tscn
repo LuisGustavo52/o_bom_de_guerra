@@ -710,7 +710,7 @@ points = PoolVector2Array( 32, 64, 0, 64, 0, 0, 32, 0 )
 1/shapes = [  ]
 1/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="batalha_final" type="Node2D"]
 
 [node name="mapa" type="TileMap" parent="."]
 position = Vector2( 35, 65 )
