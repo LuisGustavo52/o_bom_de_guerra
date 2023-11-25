@@ -16,12 +16,12 @@ func morre():
 	#get_tree().change_scene("res://OMEGA_PROJECT.tscn")
 
 func hit_crab():
-	print (vida)
+	print ("hit")
 	if (vida < 1):
 		morre()
-		print("alberto")
 	vida -= 1
-	print ("hit")
+	print (vida)
+	
 	
 
 func ataque(var direcao):
