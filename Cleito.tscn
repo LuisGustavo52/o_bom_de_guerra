@@ -394,7 +394,7 @@ tracks/1/keys = {
 extents = Vector2( 4.2147, 10.4324 )
 
 [node name="Cleito" type="KinematicBody2D"]
-position = Vector2( 438, 232 )
+position = Vector2( 438, 200 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 2 )
 __meta__ = {

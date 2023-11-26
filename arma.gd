@@ -17,6 +17,6 @@ func _ready():
 
 
 func _on_arma_body_entered(body):
-	if body.has_method("hit"):       
+	if body.has_method("hit"):   
 		body.hit()
 	
