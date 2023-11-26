@@ -3,7 +3,7 @@ extends KinematicBody2D
 var movimento = Vector2()
 var ultimaAnimacao = 0
 var vida = 3
-var morto = 0
+var bloqueio = 0
 var velocidade = 175
 
 onready var anim = $sprite_boneco/AnimationPlayer
@@ -22,13 +22,15 @@ func desliga_ataque():
 	colisao_direita.set_deferred("disabled", true)
 
 func morre():
-	morto = 1
+	bloqueio = 1
 	anim.play("morte")
 	colisao.set_deferred("disabled", true)
 	crab.parado()
 	#get_tree().change_scene("res://OMEGA_PROJECT.tscn")
 
 func hit_crab():
+	anim.play("hit")
+	bloqueio = 1
 	print ("hit")
 	if (vida < 1):
 		morre()
@@ -41,7 +43,7 @@ func ataque(var direcao):
 	pass
 
 func _physics_process(delta):	
-	if (morto == 0):	
+	if (bloqueio == 0):	
 		if Input.is_action_pressed("attack"):
 			if ultimaAnimacao == 1:
 				movimento.x = 0
@@ -110,7 +112,5 @@ func _physics_process(delta):
 		movimento = move_and_slide(movimento)
 
 
-func _on_AnimationPlayer_animation_finished(anim):
-	pass
 
 

@@ -20,7 +20,6 @@ func parado():
 	colisao_atras.set_deferred("disabled", true)
 	anim.set_animation("parado")
 	parado = 1
-	print ("parado")
 	
 func _ready():
 	timer.wait_time = tataque
@@ -38,8 +37,10 @@ func hit():
 		if vida < 1:
 			morte()
 		print(vida)
+		morte = 1
+		parado = 1
 
-onready var anim = $AnimatedSprite
+onready var anim = $sprite_crab
 
 func _physics_process(delta):		
 	var dist = position.distance_to(cleito.position)
@@ -78,3 +79,6 @@ func _on_Timer_timeout():
 			anim.set_animation("ataque_cima")
 		
 			
+
+
+
