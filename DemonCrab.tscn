@@ -82,7 +82,7 @@ shape = SubResource( 5 )
 position = Vector2( 0, 1 )
 frames = SubResource( 2 )
 animation = "parado"
-frame = 3
+frame = 2
 playing = true
 script = ExtResource( 19 )
 

@@ -6,6 +6,7 @@ var vida = 3
 var bloqueio = 0
 var velocidade = 175
 
+
 onready var anim = $sprite_boneco/AnimationPlayer
 onready var sprite = $sprite_boneco
 onready var colisao = $colisao_boneco
