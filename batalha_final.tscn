@@ -761,3 +761,9 @@ __meta__ = {
 [node name="Cleito" parent="." instance=ExtResource( 11 )]
 scale = Vector2( 3, 3 )
 z_index = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 513, 321 )
+z_index = 3
+current = true
+zoom = Vector2( 0.87, 0.755 )
