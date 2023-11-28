@@ -8,11 +8,26 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Cleiton",
+"language": "GDScript",
+"path": "res://Cleito.gd"
+} ]
+_global_script_class_icons={
+"Cleiton": ""
+}
+
 [application]
 
 config/name="OMEGA_PROJECT"
-run/main_scene="res://OMEGA_PROJECT.tscn"
+run/main_scene="res://Palacio.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Hud="*res://HUD.tscn"
+Global="*res://Global.gd"
 
 [gui]
 

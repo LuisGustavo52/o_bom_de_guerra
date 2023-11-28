@@ -1,4 +1,4 @@
-extends Area2D
+extends Label
 
 
 # Declare member variables here. Examples:
@@ -7,17 +7,12 @@ extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
+func _process(delta : float) -> void:
+	if Global.cleito_vida < 0:
+		text = String("morto")
+	else:
+		text = String(Global.cleito_vida)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Area2D_body_entered(body):
-	if body is Cleiton:
-		get_tree().change_scene("res://batalha_final.tscn")
-	
-

@@ -1,8 +1,8 @@
 extends KinematicBody2D
+class_name Cleiton
 
 var movimento = Vector2()
 var ultimaAnimacao = 0
-var vida = 3
 var bloqueio = 0
 var velocidade = 175
 
@@ -15,6 +15,7 @@ onready var colisao_baixo = $arma/colisao_arma_baixo
 onready var colisao_esquerda = $arma/colisao_arma_ladoL
 onready var colisao_direita = $arma/colisao_arma_ladoR
 onready var crab = get_node("/root/batalha_final/DemonCrab")
+
 
 func desliga_ataque():
 	colisao_cima.set_deferred("disabled", true)
@@ -33,16 +34,12 @@ func hit_crab():
 	anim.play("hit")
 	bloqueio = 1
 	print ("hit")
-	if (vida < 1):
+	if (Global.cleito_vida < 1):
 		morre()
-	vida -= 1
-	print (vida)
+	Global.set_cleito_vida(1)
+	print (Global.cleito_vida)
 	
 	
-
-func ataque(var direcao):
-	pass
-
 func _physics_process(delta):	
 	if (bloqueio == 0):	
 		if Input.is_action_pressed("attack"):
@@ -109,6 +106,7 @@ func _physics_process(delta):
 				
 			#Função de ataque
 		
+			
 			
 		movimento = move_and_slide(movimento)
 
