@@ -37,17 +37,17 @@ animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "ataque_baixo",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 14 ), ExtResource( 9 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "ataque_cima",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 22 ) ],
 "loop": false,
 "name": "hit",
-"speed": 25.0
+"speed": 30.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 21 ) ],
 "loop": false,
@@ -82,7 +82,7 @@ shape = SubResource( 5 )
 position = Vector2( 0, 1 )
 frames = SubResource( 2 )
 animation = "parado"
-frame = 4
+frame = 3
 playing = true
 script = ExtResource( 19 )
 

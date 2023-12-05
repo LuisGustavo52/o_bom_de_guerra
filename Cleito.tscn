@@ -421,7 +421,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 4.2147, 10.4324 )
+extents = Vector2( 3.22013, 10.4324 )
 
 [node name="Cleito" type="KinematicBody2D"]
 position = Vector2( 438, 200 )
@@ -462,8 +462,9 @@ script = ExtResource( 5 )
 script = ExtResource( 4 )
 
 [node name="colisao_arma_ladoR" type="CollisionShape2D" parent="arma"]
-position = Vector2( 12, 13 )
+position = Vector2( 11.1813, 12.4352 )
 rotation = 0.603884
+scale = Vector2( 1, 1 )
 shape = SubResource( 14 )
 disabled = true
 

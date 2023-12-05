@@ -6,10 +6,10 @@ onready var colisao_atras = $mao/hit_box_crab_atras
 onready var timer = $Timer
 onready var cleito = get_node("/root/batalha_final/Cleito")
 
-var speed = 100
+var speed = 140
 var vida = 10
 var tataque = 0.4
-var dataque = 90 
+var dataque = 90
 var parado = 0
 var posicao_cleito = Vector2()
 var posicao_crab = Vector2()
