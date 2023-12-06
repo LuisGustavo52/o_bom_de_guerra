@@ -17,6 +17,8 @@ func _ready():
 
 
 func _on_AnimationPlayer_animation_finished(hit):
-	if Global.cleito_vida >= 0:
-		print("teste")
-		cleito.bloqueio = 0
+	match hit:
+		"hit":
+			if Global.cleito_vida >= 0:
+				print("teste")
+				cleito.bloqueio = 0

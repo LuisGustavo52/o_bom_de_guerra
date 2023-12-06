@@ -19,5 +19,6 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body is Cleiton:
 		get_tree().change_scene("res://batalha_final.tscn")
+		Global.fase = 3
 	
 
