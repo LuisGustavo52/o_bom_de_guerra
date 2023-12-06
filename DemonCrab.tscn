@@ -37,17 +37,17 @@ animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "ataque_baixo",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 14 ), ExtResource( 9 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "ataque_cima",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 22 ) ],
 "loop": false,
 "name": "hit",
-"speed": 25.0
+"speed": 30.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 21 ) ],
 "loop": false,
@@ -106,6 +106,9 @@ scale = Vector2( 1.141, 0.962 )
 shape = SubResource( 4 )
 disabled = true
 
+[node name="Timer2" type="Timer" parent="."]
+
 [connection signal="animation_finished" from="sprite_crab" to="sprite_crab" method="_on_sprite_crab_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="mao" to="mao" method="_on_mao_body_entered"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

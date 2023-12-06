@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="OMEGA_PROJECT"
+config/name="O Bom de Guerra"
 run/main_scene="res://Palacio.tscn"
 config/icon="res://icon.png"
 
@@ -28,6 +28,10 @@ config/icon="res://icon.png"
 
 Hud="*res://HUD.tscn"
 Global="*res://Global.gd"
+
+[display]
+
+window/size/resizable=false
 
 [gui]
 

@@ -17,6 +17,7 @@ onready var colisao_direita = $arma/colisao_arma_ladoR
 onready var crab = get_node("/root/batalha_final/DemonCrab")
 
 
+
 func desliga_ataque():
 	colisao_cima.set_deferred("disabled", true)
 	colisao_baixo.set_deferred("disabled", true)
@@ -28,6 +29,7 @@ func morre():
 	anim.play("morte")
 	colisao.set_deferred("disabled", true)
 	crab.parado()
+	crab.timer2.start()
 	#get_tree().change_scene("res://OMEGA_PROJECT.tscn")
 
 func hit_crab():
@@ -113,3 +115,11 @@ func _physics_process(delta):
 
 
 
+
+
+func _on_Cleito_child_entered_tree(node):
+	if Global.fase ==3:
+		$Soundtrack1.stop()
+		$Soundtrack2.play()
+	else:
+		$Soundtrack1.play()
