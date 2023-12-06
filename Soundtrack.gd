@@ -6,5 +6,6 @@ extends AudioStreamPlayer
 # var b = "text"
 
 func _on_Soundtrack_finished():
-	if (Global.fase != 3):
-		$Soundtrack.play()
+	pass
+	#if (Global.fase != 3):
+		#$Soundtrack.play()
